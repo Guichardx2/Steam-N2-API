@@ -59,7 +59,7 @@ OBS: Todas as rotas do tipo POST devem conter parâmetros passados no body atrav
 
 2. /userFamilyInfo
 
-    Esta rota retorna a lista de amigos do usuário passo pela steamId.
+    Esta rota retorna a lista de amigos e relações do usuário passando sua steamId.
 
        {
            "steamId": "<qualquer id>"
@@ -81,7 +81,7 @@ OBS: Todas as rotas do tipo POST devem conter parâmetros passados no body atrav
 
   3. /gameInfoAchievementsGlobal
 
-  Esta rota retorna todas as conquistas de um jogo e suas respectivas porcentagens de players conquistadores. O parâmetro passado deve ser o gameId
+  Esta rota retorna todas as conquistas de um jogo e suas respectivas porcentagens de players conquistadores. O parâmetro passado deve ser o gameId.
     
 
        {
@@ -98,9 +98,13 @@ OBS: Todas as rotas do tipo POST devem conter parâmetros passados no body atrav
 
   <hr>
   
-  4. /gamerStatsAchievements (Rota esgotada por mim)
+  4. /gamerStatsAchievements (Rota esgotada para minha API KEY)
 
-  Esta rota retorna todas as conquistas do perfil do usuário. O parâmetro passado deve ser a steamId
+  Embora a requisição tenha sido esgotada para minha chave, se pegares o link e passar por param na url, conseguirá a resposta.
+  
+  http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=440&key=(ApiKey)&steamid=(steamId)
+
+  Esta rota retorna todas as conquistas do perfil do usuário. O parâmetro passado deve ser a steamId.
     
 
        {
@@ -110,13 +114,16 @@ OBS: Todas as rotas do tipo POST devem conter parâmetros passados no body atrav
    ### Os dados de resposta devem ser: #### 
    
   -Conta privada (Sem dados a ser exibidos se a conta for privada)
+  
   -Nome da conquista
+  
   -Conquista desbloqueada
+  
   -Tempo de desbloqueio
 
   ### Imagem de exemplo: ###
 
-  Nesta imagem, tratei o erro para melhor entendimento.
+  Nesta imagem, tratei o erro para melhor o entendimento.
   
  ![image](https://github.com/user-attachments/assets/ba0b0ef1-9b55-4c7a-bc84-dd7716d5c4db)
 
