@@ -20,6 +20,12 @@ Clone este repositório em sua máquina e utilize algum software para gerenciar 
 1. [Insomnia](https://insomnia.rest/download) (Usado por mim)
 2. [Postman](https://www.postman.com/downloads/)
 
+## Importante (.env)
+O .env está na raíz do projeto como todo .env deve estar, mas, caso você rode o projeto e ele dê erro de path e não ache o .env, erro enfrentado por mim mas já corrigido para que o projeto possa rodar sem problema, deve ser feita a segiunte configuração no SERVICE:
+
+![image](https://github.com/user-attachments/assets/5f1c86e4-efff-4bc6-8aaa-31cf9ebf3004)
+
+
 ## Descrição e Detalhes ##
 Após feito o que foi citado acima, vamos ao projeto em si.
 
