@@ -142,14 +142,12 @@ public class SteamService {
         HashMap<String, String> respostaRequisicao = new HashMap<>();
 
         try {
-            // Fazendo a requisição para a API Steam
             Mono<Map> response = webClientInfo.get()
                     .uri("/ISteamUserStats/GetPlayerAchievements/v0001/?appid=440&key=" + steamKey + "&steamid=" + steamId)
                     .retrieve()
                     .onStatus(
                             status -> status.is4xxClientError() || status.is5xxServerError(),
                             clientResponse -> {
-                                // Tratamento para status HTTP de erro 4xx ou 5xx
                                 if (clientResponse.statusCode().value() == 403) {
                                     return Mono.error(new RuntimeException("Acesso negado: Verifique sua chave de API ou permissões. Pode ser que o perfil esteja privado."));
                                 } else if (clientResponse.statusCode().value() == 404) {
