@@ -39,7 +39,7 @@ public class SteamController {
     }
 
     @GetMapping("/sobre")
-    public HashMap<String, String> getProjectInfo(SteamService steamService){
+    public HashMap<String, String> getProjectInfo(){
         return steamService.sobre();
     }
 }
